@@ -9,7 +9,10 @@ for(let i = 0; i < card.length; i++){
     
             cart.addEventListener("click", function(event){
              
-              
+             cou += 1;
+             if(cou > 4){
+                return alert("CAN NOT BOOK MORE THAN 4 SEAT. THANK YOU.");
+             } else {
              event.target.style.backgroundColor = '#1DD100';
              count -= 1;
              book += 1;
@@ -38,11 +41,11 @@ for(let i = 0; i < card.length; i++){
              document.getElementById('total').innerText = sum;
              document.getElementById('grand').innerText = sum;
             
-             
+             }       
      
     });
   }
-  
+ 
 
 const dis = document.getElementById('disbtn');
 dis.addEventListener('click', function() {
