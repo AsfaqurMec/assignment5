@@ -5,20 +5,29 @@ let book = 0;
 let sum = 0;
 let cou = 0;
 for(let i = 0; i < card.length; i++){
+
     const cart = card[i];
     
             cart.addEventListener("click", function(event){
-             
+              
              cou += 1;
              if(cou > 4){
                 return alert("CAN NOT BOOK MORE THAN 4 SEAT. THANK YOU.");
              } else {
+             
              event.target.style.backgroundColor = '#1DD100';
+
+             
              count -= 1;
              book += 1;
              
+             
+
              setInnerText('avail', count)
              setInnerText('book', book)
+
+             
+
              const title = event.target.innerText;
              const seat = document.getElementById('seat')
              const p1 = document.createElement("p");
@@ -40,12 +49,18 @@ for(let i = 0; i < card.length; i++){
              
              document.getElementById('total').innerText = sum;
              document.getElementById('grand').innerText = sum;
+
+             
             
-             const select = document.getElementById(title);
-              select.setAttribute("disabled", "true");
-             }       
+             }
+                   
     });
+    
+  
+
   }
+
+
 
 const dis = document.getElementById('disbtn');
 dis.addEventListener('click', function() {
@@ -79,6 +94,4 @@ dis.addEventListener('click', function() {
 function setInnerText(id, value){
   document.getElementById(id).innerText = value;
 }
-
-
 
