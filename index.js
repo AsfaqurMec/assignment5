@@ -1,6 +1,6 @@
 const card = document.querySelectorAll(".seat");
 // console.log(card);
-let count = 16;
+let count = 40;
 let book = 0;
 let sum = 0;
 let cou = 0;
@@ -41,11 +41,11 @@ for(let i = 0; i < card.length; i++){
              document.getElementById('total').innerText = sum;
              document.getElementById('grand').innerText = sum;
             
+             const select = document.getElementById(title);
+              select.setAttribute("disabled", "true");
              }       
-     
     });
   }
- 
 
 const dis = document.getElementById('disbtn');
 dis.addEventListener('click', function() {
@@ -74,21 +74,11 @@ dis.addEventListener('click', function() {
       alert('ERROR. PLEASE ENTER VALID CODE');
 
     }
+  });      
     
-
-   } );      
-    
-    
-    
-
-
 function setInnerText(id, value){
   document.getElementById(id).innerText = value;
 }
 
-function valid(){
-    var a = document.getElementById("phone").value;
-    console.log(typeof(a));
-    
-}
+
 
