@@ -5,11 +5,16 @@ let book = 0;
 let sum = 0;
 let cou = 0;
 for(let i = 0; i < card.length; i++){
-
+  
     const cart = card[i];
-    
+    const select = [];
             cart.addEventListener("click", function(event){
-              
+
+              if(select.includes(cart.innerText) === true){
+                 alert("THIS SEAT IS ALREADY SELECTED. PLEASE TRY ANOTHER ONE.")
+           } else {
+
+            select.push(cart.innerText);  
              cou += 1;
              if(cou > 4){
                 return alert("CAN NOT BOOK MORE THAN 4 SEAT. THANK YOU.");
@@ -53,7 +58,7 @@ for(let i = 0; i < card.length; i++){
              
             
              }
-                   
+         }          
     });
     
   
